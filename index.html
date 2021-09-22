@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        let persons = {
+            'moussa': {
+                name: 'Moussa',
+                job: 'devlopper',
+                techologies: ['html', 'css', 'javascript', 'php'],
+                cost: 600,
+                experience: 5
+            },
+            'modibo': {
+                name: 'Modibo',
+                job: 'devlopper',
+                techologies: ['php', 'nodejs', 'java'],
+                cost: 800,
+                experience: 8
+            },
+            'mara': {
+                name: 'Mara',
+                job: 'developper',
+                techologies: ['php', 'angular', 'java', 'javascript'],
+                cost : 500,
+                experience: 2
+            }
+        }
+        //trouver le meilleur candidat pour un projet PHP
+        //exp 8 mettrait 20 jours
+        //exp 5 mettrait 35 jours
+        //exp 2 mettrait 50 jours
+
+    let getBestCandidate = function (technology) {
+
+        let bestCandidateCost = 0;
+        let bestCandidate = null;
+        let developpers = [];
+
+
+        Object.keys(persons).forEach(id => {
+            if (persons[id].techologies.includes(technology)) {
+                developpers.push(persons[id]);
+                let jours = 0;
+
+                switch (persons[id].experience) {
+                    case 2 :
+                        jours = 50;
+                        break;
+                    
+                    case 5 :
+                        jours = 35;
+                        break;
+
+                    case 8 :
+                    jours = 20;
+                        break;
+                    default:
+                        console.log('Wrong experience');
+                        break;
+                }
+
+                persons[id].totalCost = persons[id].cost * jours;
+            }
+        })
+
+        developpers.forEach((developper, iteration) => {
+            if (iteration === 0) {
+                bestCandidateCost = developper.totalCost;
+                bestCandidate = developper;
+            }
+
+            if (developper.totalCost < bestCandidateCost) {
+                bestCandidateCost = developpers[iteration].totalCost;
+                bestCandidate = developper;
+            }
+        })
+        console.log(bestCandidate);
+    }
+        getBestCandidate('php');
+
+
+    </script>
+</body>
+</html>
