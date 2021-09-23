@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Modibo",
+        "age": 24,
+        "cars": ["Peugeot", "BMW"]
+    },
+    {
+        "name": "Moussa",
+        "age": 24,
+        "cars": ["Renault", "MERCEDES-BENZ"]
+    },
+    {
+        "name": "Kantra",
+        "age": 31,
+        "cars": ["Peugeot", "BMW"]
+    },
+    {
+        "name": "Modibo",
+        "age": 24,
+        "cars": ["Peugeot", "BMW"]
+    }
+]
