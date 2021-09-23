@@ -2,21 +2,21 @@
     {
         "name": "Modibo",
         "age": 24,
-        "cars": ["Peugeot", "BMW"]
+        "cars": ["Peugeot", "BMW"]          
     },
     {
         "name": "Moussa",
-        "age": 24,
-        "cars": ["Renault", "MERCEDES-BENZ"]
+        "age": 25,
+        "cars": ["Renault", "MERCEDES-BENZ"]          
+    },
+    {
+        "name": "Mara",
+        "age": 19,
+        "cars": ["Renault", "BMW"]          
     },
     {
         "name": "Kantra",
         "age": 31,
-        "cars": ["Peugeot", "BMW"]
-    },
-    {
-        "name": "Modibo",
-        "age": 24,
-        "cars": ["Peugeot", "BMW"]
+        "cars": ["Peugeot", "BMW"]          
     }
 ]
